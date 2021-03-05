@@ -222,8 +222,8 @@
         },
         {
             "as": [],
-            "version": "1.2.21",
-            "name": "rcp-be-lol-acs",
+            "version": "1.2.1",
+            "name": "rcp-be-lol-match-history",
             "affinity": null,
             "lazy": false
         },
@@ -439,13 +439,6 @@
         },
         {
             "as": [],
-            "version": "1.1.42",
-            "name": "rcp-be-lol-match-history",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "1.2.45",
             "name": "rcp-fe-lol-postgame",
             "affinity": [
@@ -486,7 +479,7 @@
             "version": "1.0.19",
             "name": "rcp-be-lol-kr-playtime-reminder",
             "affinity": null,
-            "lazy": false
+            "lazy": true
         },
         {
             "as": [],
@@ -648,13 +641,6 @@
         },
         {
             "as": [],
-            "version": "1.0.0",
-            "name": "rcp-be-lol-gamhs",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "1.0.23",
             "name": "rcp-be-lol-heartbeat",
             "affinity": null,
@@ -686,7 +672,7 @@
             "version": "1.0.16",
             "name": "rcp-be-lol-kickout",
             "affinity": null,
-            "lazy": false
+            "lazy": true
         },
         {
             "as": [],
@@ -947,7 +933,7 @@
             "version": "0.0.6",
             "name": "rcp-fe-lol-kickout",
             "affinity": null,
-            "lazy": false
+            "lazy": true
         },
         {
             "as": [],
