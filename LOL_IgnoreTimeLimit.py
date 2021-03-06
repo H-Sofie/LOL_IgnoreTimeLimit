@@ -226,8 +226,8 @@ def back(file):
         },
         {
             "as": [],
-            "version": "1.2.21",
-            "name": "rcp-be-lol-acs",
+            "version": "1.2.1",
+            "name": "rcp-be-lol-match-history",
             "affinity": null,
             "lazy": false
         },
@@ -443,13 +443,6 @@ def back(file):
         },
         {
             "as": [],
-            "version": "1.1.42",
-            "name": "rcp-be-lol-match-history",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "1.2.45",
             "name": "rcp-fe-lol-postgame",
             "affinity": [
@@ -647,13 +640,6 @@ def back(file):
             "as": [],
             "version": "1.0.25",
             "name": "rcp-be-lol-game-client-chat",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "1.0.0",
-            "name": "rcp-be-lol-gamhs",
             "affinity": null,
             "lazy": false
         },
@@ -1059,10 +1045,10 @@ if os.path.isdir('LeagueClient'):
         easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit',title = 'Debug',ok_button = '好的')
         sys.exit()
 
-    choice = easygui.buttonbox(msg = '目前可以修改{num}处地方(共3处)\n\n选择操作'.format(num = need) ,title = '适配游戏版本11.3+',choices = ['改文件','还原为官方文件','取消'])
+    choice = easygui.buttonbox(msg = '目前可以修改{num}处地方(共3处)\n\n选择操作：'.format(num = need) ,title = '适配游戏版本11.5.362',choices = ['修改文件','还原为官方文件','取消'])
 
 #Read the contents of the file and create a new file to replace it.
-    if choice == '改文件':
+    if choice == '修改文件':
         t = 0
         if '''            "name": "rcp-be-lol-kickout",
             "affinity": null,
@@ -1105,7 +1091,7 @@ if os.path.isdir('LeagueClient'):
             replace.write(read4)
         os.remove('plugin-manifest.json')
         os.rename('plugin-manifest2.json' , 'plugin-manifest.json')
-        easygui.msgbox(msg = '已成功替换{}处'.format(t),title = '完成',ok_button = '好的')
+        easygui.msgbox(msg = '已成功替换{}处'.format(t) , title = '完成' , ok_button = '好的')
 
 #Restore files.
     elif choice == '还原为官方文件':
@@ -1114,4 +1100,4 @@ if os.path.isdir('LeagueClient'):
         easygui.msgbox(msg = '已成功还原' , title = '还原' , ok_button = '好的')
 else:
     easygui.msgbox(msg = '你放的位置不合适，需要放在“英雄联盟”文件夹内！',title = '注意！',ok_button = '好的')
-easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit',title = 'Debug',ok_button = '好的')
+easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit' , title = 'Debug' , ok_button = '好的')
