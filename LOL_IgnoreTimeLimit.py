@@ -1,5 +1,7 @@
-import os,easygui,sys
+import os,easygui,sys,shutil
+from pathlib import Path
 
+#官方的plugin-manifest.json
 #Official plugin-manifest.json
 def back(file):
 	file.write('''{
@@ -1016,39 +1018,25 @@ def back(file):
     ]
 }''')
 
-#Determine whether the file location is correct.
-if os.path.isdir('LeagueClient'):
-    os.chdir('.\LeagueClient\Plugins')
-    with open('plugin-manifest.json' , 'r+') as file:
-        read = file.read()
-    need = 0
-    if '''            "name": "rcp-be-lol-kickout",
+#定义一个用于统计需要修改多少处的函数
+def Statistics():
+        need = 0
+        if '''            "name": "rcp-be-lol-kickout",
             "affinity": null,
             "lazy": false''' in read:
-        need += 1
-    if '''            "name": "rcp-fe-lol-kickout",
+                need +=1
+        if '''            "name": "rcp-fe-lol-kickout",
             "affinity": null,
             "lazy": false''' in read:
-        need += 1
-    if '''            "name": "rcp-be-lol-kr-playtime-reminder",
+                need += 1
+        if '''            "name": "rcp-be-lol-kr-playtime-reminder",
             "affinity": null,
             "lazy": false''' in read:
-        need += 1
+                need += 1
+        return need
 
-#Operation when no modification is required.
-    if need == 0:
-        choice = easygui.buttonbox(msg = '不需要再修改了，但可以还原文件',title = '提示',choices = ['还原为官方文件' , '退出'])
-        if choice == '还原为官方文件':
-                with open('plugin-manifest.json' , 'w+') as backup:
-                        back(backup)
-                easygui.msgbox(msg = '已成功还原' , title = '还原' , ok_button = '好的')
-        easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit',title = 'Debug',ok_button = '好的')
-        sys.exit()
-
-    choice = easygui.buttonbox(msg = '目前可以修改{num}处地方(共3处)\n\n选择操作：'.format(num = need) ,title = '适配游戏版本11.5.362',choices = ['修改文件','还原为官方文件','取消'])
-
-#Read the contents of the file and create a new file to replace it.
-    if choice == '修改文件':
+#定义一个用于修改替换的函数
+def replace_json():
         t = 0
         if '''            "name": "rcp-be-lol-kickout",
             "affinity": null,
@@ -1093,11 +1081,52 @@ if os.path.isdir('LeagueClient'):
         os.rename('plugin-manifest2.json' , 'plugin-manifest.json')
         easygui.msgbox(msg = '已成功替换{}处'.format(t) , title = '完成' , ok_button = '好的')
 
+#循环检测路径直到匹配
+#Loop the path until the match is successful.
+times = 0
+while not os.path.isdir('LeagueClient') and times == 0:
+        times += 1
+        choice = easygui.buttonbox(msg = '没有检测到当前目录下的英雄联盟相关文件，请手动选择英雄联盟游戏目录！' , title = '手动选择' , choices = ['选择' , '取消'])
+        if choice == '选择':
+                Spath = easygui.diropenbox()
+                os.chdir(Spath)
+        else:
+                sys.exit()
+while not os.path.isdir('LeagueClient') and times == 1:
+        choice = easygui.buttonbox(msg = '你选择位置不合适，需要选择“英雄联盟”文件夹（内含LeagueClient等文件夹）！',title = '注意！',choices = ['重新选择' , '取消'])
+        if choice == '重新选择':
+                Spath = easygui.diropenbox()
+                os.chdir(Spath)
+        else:
+                sys.exit()
+
+#更改工作路径并读进read
+#Change working path and read in 'read'.
+os.chdir('.\LeagueClient\Plugins')
+with open('plugin-manifest.json' , 'r+') as file:
+        read = file.read()
+
+#当不需要修改时执行的操作
+#Operation when no modification is required.
+if Statistics() == 0:
+        choice = easygui.buttonbox(msg = '不需要再修改了，但可以还原文件',title = '提示',choices = ['还原为官方文件' , '退出'])
+        if choice == '还原为官方文件':
+                with open('plugin-manifest.json' , 'w+') as backup:
+                        back(backup)
+                easygui.msgbox(msg = '已成功还原' , title = '还原' , ok_button = '好的')
+        easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit',title = 'Debug',ok_button = '好的')
+        sys.exit()
+choice = easygui.buttonbox(msg = '目前可以修改{num}处地方(共3处)\n\n选择操作：'.format(num = Statistics()) ,title = '适配游戏版本11.5.362',choices = ['修改文件','还原为官方文件','取消'])
+
+#调用replace_json函数
+#Call replace_json function.
+if choice == '修改文件':
+        replace_json()
+
+#恢复源文件
 #Restore files.
-    elif choice == '还原为官方文件':
+elif choice == '还原为官方文件':
         with open('plugin-manifest.json' , 'w+') as backup:
             back(backup)
         easygui.msgbox(msg = '已成功还原' , title = '还原' , ok_button = '好的')
-else:
-    easygui.msgbox(msg = '你放的位置不合适，需要放在“英雄联盟”文件夹内！',title = '注意！',ok_button = '好的')
 easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit' , title = 'Debug' , ok_button = '好的')
