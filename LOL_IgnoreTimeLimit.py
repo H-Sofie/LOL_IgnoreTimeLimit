@@ -1,5 +1,4 @@
-import os,easygui,sys,shutil
-from pathlib import Path
+import os,easygui,sys
 
 #官方的plugin-manifest.json
 #Official plugin-manifest.json
