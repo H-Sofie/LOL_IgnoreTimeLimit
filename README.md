@@ -16,3 +16,5 @@ Removed the time limit for League of Legends in China (anti-addiction system)
     └── TCLS
 ```
 然后运行即可
+
+亦或者打开后选择至该路径也可以
