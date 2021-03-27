@@ -87,6 +87,13 @@
         },
         {
             "as": [],
+            "version": "0.0.65",
+            "name": "rcp-fe-audio",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
             "version": "1.0.0",
             "name": "rcp-be-lol-league-session",
             "affinity": null,
@@ -108,27 +115,6 @@
         },
         {
             "as": [],
-            "version": "0.0.65",
-            "name": "rcp-fe-audio",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "1.1.21",
-            "name": "rcp-be-lol-game-settings",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "2.6.2",
-            "name": "rcp-be-lol-summoner",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "0.0.16",
             "name": "rcp-fe-lol-lock-and-load",
             "affinity": [
@@ -138,22 +124,8 @@
         },
         {
             "as": [],
-            "version": "1.0.50",
-            "name": "rcp-be-lol-settings",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "0.1.8",
             "name": "rcp-fe-lol-typekit",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "0.0.800",
-            "name": "rcp-fe-lol-l10n",
             "affinity": null,
             "lazy": false
         },
@@ -176,6 +148,34 @@
             "as": [],
             "name": "rcp-fe-gdp-live",
             "version": "1.6.5",
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "1.1.21",
+            "name": "rcp-be-lol-game-settings",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "2.6.2",
+            "name": "rcp-be-lol-summoner",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "1.0.50",
+            "name": "rcp-be-lol-settings",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "0.0.800",
+            "name": "rcp-fe-lol-l10n",
+            "affinity": null,
             "lazy": false
         },
         {
@@ -783,13 +783,6 @@
             "as": [],
             "version": "1.2.21",
             "name": "rcp-be-lol-queue-eligibility",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "1.2.7",
-            "name": "rcp-be-lol-recommendations",
             "affinity": null,
             "lazy": false
         },
