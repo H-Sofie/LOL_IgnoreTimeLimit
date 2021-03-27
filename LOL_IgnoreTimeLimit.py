@@ -92,6 +92,13 @@ def back(file):
         },
         {
             "as": [],
+            "version": "0.0.65",
+            "name": "rcp-fe-audio",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
             "version": "1.0.0",
             "name": "rcp-be-lol-league-session",
             "affinity": null,
@@ -113,27 +120,6 @@ def back(file):
         },
         {
             "as": [],
-            "version": "0.0.65",
-            "name": "rcp-fe-audio",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "1.1.21",
-            "name": "rcp-be-lol-game-settings",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "2.6.2",
-            "name": "rcp-be-lol-summoner",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "0.0.16",
             "name": "rcp-fe-lol-lock-and-load",
             "affinity": [
@@ -143,22 +129,8 @@ def back(file):
         },
         {
             "as": [],
-            "version": "1.0.50",
-            "name": "rcp-be-lol-settings",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "0.1.8",
             "name": "rcp-fe-lol-typekit",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "0.0.800",
-            "name": "rcp-fe-lol-l10n",
             "affinity": null,
             "lazy": false
         },
@@ -181,6 +153,34 @@ def back(file):
             "as": [],
             "name": "rcp-fe-gdp-live",
             "version": "1.6.5",
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "1.1.21",
+            "name": "rcp-be-lol-game-settings",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "2.6.2",
+            "name": "rcp-be-lol-summoner",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "1.0.50",
+            "name": "rcp-be-lol-settings",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "0.0.800",
+            "name": "rcp-fe-lol-l10n",
+            "affinity": null,
             "lazy": false
         },
         {
@@ -793,13 +793,6 @@ def back(file):
         },
         {
             "as": [],
-            "version": "1.2.7",
-            "name": "rcp-be-lol-recommendations",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "2.13.9",
             "name": "rcp-be-lol-regalia",
             "affinity": null,
@@ -1017,7 +1010,7 @@ def back(file):
     ]
 }''')
 
-#定义一个用于统计需要修改多少处的函数
+#定义一个统计函数
 def Statistics():
         need = 0
         if '''            "name": "rcp-be-lol-kickout",
@@ -1115,7 +1108,7 @@ if Statistics() == 0:
                 easygui.msgbox(msg = '已成功还原' , title = '还原' , ok_button = '好的')
         easygui.msgbox(msg = '有疑问或bug反馈请在Github上提交issues\n\n源码参见:https://github.com/SaoHYC/LOL_IgnoreTimeLimit',title = 'Debug',ok_button = '好的')
         sys.exit()
-choice = easygui.buttonbox(msg = '目前可以修改{num}处地方(共3处)\n\n选择操作：'.format(num = Statistics()) ,title = '适配游戏版本11.5.362',choices = ['修改文件','还原为官方文件','取消'])
+choice = easygui.buttonbox(msg = '目前可以修改{num}处地方(共3处)\n\n选择操作：'.format(num = Statistics()) ,title = '适配游戏版本11.6.364',choices = ['修改文件','还原为官方文件','取消'])
 
 #调用replace_json函数
 #Call replace_json function.
