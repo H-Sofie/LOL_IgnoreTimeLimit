@@ -479,7 +479,7 @@
             "version": "1.0.19",
             "name": "rcp-be-lol-kr-playtime-reminder",
             "affinity": null,
-            "lazy": true
+            "lazy": false
         },
         {
             "as": [],
@@ -672,7 +672,7 @@
             "version": "1.0.16",
             "name": "rcp-be-lol-kickout",
             "affinity": null,
-            "lazy": true
+            "lazy": false
         },
         {
             "as": [],
@@ -926,7 +926,7 @@
             "version": "0.0.6",
             "name": "rcp-fe-lol-kickout",
             "affinity": null,
-            "lazy": true
+            "lazy": false
         },
         {
             "as": [],
