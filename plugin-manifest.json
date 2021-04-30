@@ -80,15 +80,15 @@
         },
         {
             "as": [],
-            "version": "1.0.26",
-            "name": "rcp-be-lol-loyalty",
+            "version": "0.0.65",
+            "name": "rcp-fe-audio",
             "affinity": null,
             "lazy": false
         },
         {
             "as": [],
-            "version": "0.0.65",
-            "name": "rcp-fe-audio",
+            "version": "1.0.26",
+            "name": "rcp-be-lol-loyalty",
             "affinity": null,
             "lazy": false
         },
@@ -108,18 +108,18 @@
         },
         {
             "as": [],
-            "version": "1.4.17",
-            "name": "rcp-be-lol-inventory",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "0.0.16",
             "name": "rcp-fe-lol-lock-and-load",
             "affinity": [
                 "home"
             ],
+            "lazy": false
+        },
+        {
+            "as": [],
+            "version": "1.4.17",
+            "name": "rcp-be-lol-inventory",
+            "affinity": null,
             "lazy": false
         },
         {
@@ -462,13 +462,6 @@
         },
         {
             "as": [],
-            "version": "1.0.63",
-            "name": "rcp-be-lol-clubs",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "1.0.5",
             "name": "rcp-be-lol-geoinfo",
             "affinity": null,
@@ -585,8 +578,8 @@
         },
         {
             "as": [],
-            "version": "1.0.32",
-            "name": "rcp-be-lol-clubs-public",
+            "version": "1.0.0",
+            "name": "rcp-be-lol-client-config",
             "affinity": null,
             "lazy": false
         },
