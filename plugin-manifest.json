@@ -66,6 +66,13 @@
         },
         {
             "as": [],
+            "version": "1.0.0",
+            "name": "rcp-be-lol-league-session",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
             "version": "1.0.31",
             "name": "rcp-be-lol-player-preferences",
             "affinity": null,
@@ -80,13 +87,6 @@
         },
         {
             "as": [],
-            "version": "0.0.65",
-            "name": "rcp-fe-audio",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "1.0.26",
             "name": "rcp-be-lol-loyalty",
             "affinity": null,
@@ -94,8 +94,8 @@
         },
         {
             "as": [],
-            "version": "1.0.0",
-            "name": "rcp-be-lol-league-session",
+            "version": "0.0.65",
+            "name": "rcp-fe-audio",
             "affinity": null,
             "lazy": false
         },
@@ -390,6 +390,13 @@
         },
         {
             "as": [],
+            "version": "1.0.0",
+            "name": "rcp-be-lol-rewards",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
             "version": "0.0.228",
             "name": "rcp-fe-lol-champion-details",
             "affinity": null,
@@ -462,6 +469,13 @@
         },
         {
             "as": [],
+            "version": "1.0.0",
+            "name": "rcp-be-lol-client-config",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
             "version": "1.0.5",
             "name": "rcp-be-lol-geoinfo",
             "affinity": null,
@@ -472,7 +486,7 @@
             "version": "1.0.19",
             "name": "rcp-be-lol-kr-playtime-reminder",
             "affinity": null,
-            "lazy": false
+            "lazy": true
         },
         {
             "as": [],
@@ -578,13 +592,6 @@
         },
         {
             "as": [],
-            "version": "1.0.0",
-            "name": "rcp-be-lol-client-config",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
             "version": "1.0.22",
             "name": "rcp-be-lol-content-targeting",
             "affinity": null,
@@ -665,7 +672,7 @@
             "version": "1.0.16",
             "name": "rcp-be-lol-kickout",
             "affinity": null,
-            "lazy": false
+            "lazy": true
         },
         {
             "as": [],
@@ -919,7 +926,7 @@
             "version": "0.0.6",
             "name": "rcp-fe-lol-kickout",
             "affinity": null,
-            "lazy": false
+            "lazy": true
         },
         {
             "as": [],
