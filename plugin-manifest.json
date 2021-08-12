@@ -180,15 +180,15 @@
         },
         {
             "as": [],
-            "version": "0.0.800",
-            "name": "rcp-fe-lol-l10n",
+            "version": "1.3.24",
+            "name": "rcp-be-lol-game-queues",
             "affinity": null,
             "lazy": false
         },
         {
             "as": [],
-            "version": "1.3.24",
-            "name": "rcp-be-lol-game-queues",
+            "version": "0.0.800",
+            "name": "rcp-fe-lol-l10n",
             "affinity": null,
             "lazy": false
         },
@@ -376,6 +376,13 @@
         },
         {
             "as": [],
+            "version": "1.1.4",
+            "name": "rcp-be-lol-kr-shutdown-law",
+            "affinity": null,
+            "lazy": false
+        },
+        {
+            "as": [],
             "version": "5.1.1",
             "name": "rcp-be-lol-loadouts",
             "affinity": null,
@@ -485,13 +492,6 @@
             "as": [],
             "version": "1.0.19",
             "name": "rcp-be-lol-kr-playtime-reminder",
-            "affinity": null,
-            "lazy": false
-        },
-        {
-            "as": [],
-            "version": "1.1.4",
-            "name": "rcp-be-lol-kr-shutdown-law",
             "affinity": null,
             "lazy": false
         },
