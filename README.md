@@ -10,7 +10,7 @@
 
 * 用法：将LOL_IgnoreTimeLimit放在'英雄联盟'文件夹内。文件夹目录类似于：
 ```
-\英雄联盟(游戏目录)
+\英雄联盟(游戏目录 路径选择该目录即可)
     ├── Cross
     ├── Game
     ├── LeagueClient
